@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!--
+  ~ Copyright (c) Gabriel Sterz 2022
+  -->
+
+
+<TabPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sterzsolutions.ccmavenfx.MainViewController">
+   <tabs>
+      <Tab text="Wallet">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="Panic Page">
+         <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

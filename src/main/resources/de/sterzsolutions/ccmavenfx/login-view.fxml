@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: black; -fx-border-color: e5b00a; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.sterzsolutions.ccmavenfx.MainAppController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="518.0" fitWidth="453.0" layoutX="18.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/gabeLogoRight.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="userCreatedPane" layoutX="50.0" layoutY="620.0" prefHeight="51.0" prefWidth="330.0" visible="false">
+               <children>
+                  <Text fx:id="userCreatedText" fill="#50d02c" layoutX="12.0" layoutY="21.0" strokeWidth="0.0" text="User successfully created. Please Login now." textAlignment="CENTER" wrappingWidth="305.13671875">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="userDoesntExist" layoutX="50.0" layoutY="620.0" prefHeight="51.0" prefWidth="330.0" visible="false">
+               <children>
+                  <Text fill="#ff0011" layoutX="12.0" layoutY="21.0" strokeWidth="0.0" text="User doesn't exist. Please Register or check your credentials." textAlignment="CENTER" wrappingWidth="305.13671875">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="passwordWrong" layoutX="60.0" layoutY="630.0" prefHeight="51.0" prefWidth="330.0" visible="false">
+               <children>
+                  <Text fill="RED" layoutX="12.0" layoutY="21.0" strokeWidth="0.0" text="Password wrong. Please Try Again." textAlignment="CENTER" wrappingWidth="305.13671875">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="768.0" prefWidth="754.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="loginUsernameTextfield" alignment="CENTER" layoutX="103.0" layoutY="370.0" prefHeight="50.0" prefWidth="400.0" promptText="USERNAME">
+               <font>
+                  <Font name="Roboto Black" size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="loginPasswordField" alignment="CENTER" layoutX="103.0" layoutY="440.0" prefHeight="50.0" prefWidth="400.0" promptText="PASSWORD">
+               <font>
+                  <Font name="Roboto Black" size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="loginLoginButton" layoutX="203.0" layoutY="545.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: f0b90b;" text="LOGIN">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="loginRegisterButton" layoutX="203.0" layoutY="645.0" mnemonicParsing="false" onAction="#enterRegisterPane" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: f0b90b;" text="REGISTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="302.0" fitWidth="490.0" layoutX="58.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="57.0">
+               <image>
+                  <Image url="@../../../images/binance-logo-text.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="119.0" layoutY="317.0" prefHeight="30.0" prefWidth="368.0" text="BInance Trade &amp; Finance Management" textAlignment="JUSTIFY" textFill="#f0b90b" underline="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="290.0" layoutY="610.0" text="OR" textFill="#f0b90b">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="registerPane" layoutX="100.0" layoutY="360.0" prefHeight="398.0" prefWidth="406.0" style="-fx-background-color: BLack;" visible="false">
+               <children>
+                  <TextField fx:id="registerUsernameTextfield" alignment="CENTER" layoutX="3.0" layoutY="10.0" prefHeight="50.0" prefWidth="400.0" promptText="USERNAME">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="registerPasswordField" alignment="CENTER" layoutX="3.0" layoutY="80.0" prefHeight="50.0" prefWidth="400.0" promptText="PASSWORD">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="registerRepeatPasswordField" alignment="CENTER" layoutX="3.0" layoutY="150.0" prefHeight="50.0" prefWidth="400.0" promptText="REPEAT PASSWORD">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </PasswordField>
+                  <TextArea fx:id="registerApiKey" layoutX="3.0" layoutY="220.0" prefHeight="40.0" prefWidth="400.0" promptText="API-Key" />
+                  <TextArea fx:id="registerSecret" layoutX="3.0" layoutY="264.0" prefHeight="40.0" prefWidth="400.0" promptText="Secret" />
+                  <Button fx:id="registerRegisterButton" layoutX="23.0" layoutY="322.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: f0b90b;" text="REGISTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="registerBackButton" layoutX="224.0" layoutY="322.0" mnemonicParsing="false" onAction="#exitRegisterPane" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: f0b90b;" text="BACK">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane fx:id="registerWarningBinance" layoutX="22.0" layoutY="370.0" prefHeight="30.0" prefWidth="362.0" visible="false">
+                     <children>
+                        <Text fill="RED" fontSmoothingType="LCD" layoutY="20.0" strokeType="INSIDE" strokeWidth="0.0" text="CHECK YOUR BINANCE API CREDENTIALS !" textAlignment="CENTER" wrappingWidth="359.72021484375">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="registerWarningUser" layoutX="22.0" layoutY="370.0" prefHeight="30.0" prefWidth="362.0" visible="false">
+                     <children>
+                        <Text fill="RED" fontSmoothingType="LCD" layoutY="20.0" strokeType="INSIDE" strokeWidth="0.0" text="USERNAME ALREADY IN USE !" textAlignment="CENTER" wrappingWidth="358.72021484375">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="registerWarningPassword" layoutX="22.0" layoutY="370.0" prefHeight="30.0" prefWidth="362.0" visible="false">
+                     <children>
+                        <Text fill="RED" fontSmoothingType="LCD" layoutY="20.0" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" text="PASSWORDS DOESN'T MATCH !" textAlignment="CENTER" wrappingWidth="363.72021484375">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
